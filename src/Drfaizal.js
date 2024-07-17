@@ -1,9 +1,49 @@
 import React, { useState, useEffect } from 'react';
 import TextField from '@mui/material/TextField';
 import './index.css';
-import Typography from '@mui/material/Typography';
-import Button  from '@mui/material/Button';
-import AddBoxRoundedIcon from '@mui/icons-material/AddBoxRounded';
+import Box from '@mui/material/Box';
+import Backdrop from '@mui/material/Backdrop';
+import SpeedDial from '@mui/material/SpeedDial';
+import SpeedDialIcon from '@mui/material/SpeedDialIcon';
+import SpeedDialAction from '@mui/material/SpeedDialAction';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+
+const actions = [
+  { icon: <AssignmentIcon />, name: 'Copy' },
+  { icon: <AssignmentIcon />, name: 'Save' },
+  { icon: <AssignmentIcon />, name: 'Print' },
+  { icon: <AssignmentIcon />, name: 'Share' },
+];
+
+ function SpeedDialTooltipOpen() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  return (
+    <Box sx={{ height: 330, transform: 'translateZ(0px)', flexGrow: 1 }}>
+      <Backdrop open={open} sx={{backgroundColor: 'smokewhite'}}/>
+      <SpeedDial
+        ariaLabel="SpeedDial tooltip example"
+        sx={{ position: 'absolute', bottom: 16, right: 16,}}
+        icon={<SpeedDialIcon />}
+        onClose={handleClose}
+        onOpen={handleOpen}
+        open={open}
+      >
+        {actions.map((action) => (
+          <SpeedDialAction
+            key={action.name}
+            icon={action.icon}
+            tooltipTitle={action.name}
+            tooltipOpen
+            onClick={handleClose}
+          />
+        ))}
+      </SpeedDial>
+    </Box>
+  );
+}
 
 function CurrentDate() {
   const [currentDate, setCurrentDate] = useState(null);
@@ -23,28 +63,7 @@ function CurrentDate() {
 function Drfaizal() {
   return (
     <div className='Df'>
-    <div>
-      <Typography sx={{fontSize: '20px', fontFamily: '"Mukta", sans-serif', marginLeft: '50px', marginTop: '20px'}} className='Pname'> 
-        <i> Patient Name : </i>
-        <TextField variant="standard" className='te' sx={{marginBottom: '5px', width: '200px', marginLeft: '100px' ,'&:hover': {}}}/>
-      </Typography>
-    </div> 
-      <Typography sx={{ fontSize: '20px', fontFamily: '"Mukta", sans-serif', marginLeft: '50px', marginTop: '20px'}}>
-        <i> Age / Sex :</i>
-        <TextField variant="standard" className='te' sx={{marginBottom: '5px', width: '200px', marginLeft: '70px' ,'&:hover': {}}}/>
-      </Typography>
-      <Typography sx={{ fontSize: '20px', fontFamily: '"Mukta", sans-serif', marginLeft: '50px', marginTop: '20px'}}>
-        <i> Date : </i>
-        <Typography sx={{marginBottom: '5px', width: '200px', marginLeft: '100px'}}> <CurrentDate/> </Typography>
-      </Typography>
-      <Typography sx={{ fontSize: '20px', fontFamily: '"Mukta", sans-serif', marginLeft: '50px', marginTop: '20px'}}>
-        <i> Ref By : </i>
-        <TextField variant="standard" className='te' sx={{marginBottom: '5px', width: '200px', marginLeft: '100px' ,'&:hover': {}}}/>
-      </Typography>
-      <hr color='#000000'/>
-      <Button className='Addbut'  variant="contained" sx={{marginTop: '600px', backgroundColor: '#ffee58', color: '#006064', Size: '20px', '&:hover': {backgroundColor: '#006064', color: '#ffee58'}}} startIcon={<AddBoxRoundedIcon/>}>
-        Add Test Result
-      </Button>
+      <SpeedDialTooltipOpen/>
     </div>
   )
 }
