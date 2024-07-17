@@ -109,11 +109,9 @@ export default function PermanentDrawerLeft(){
         <Toolbar />
         <div>
        {showFirst && (<Drfaizal/>)}
-       {showFirst ? "" : ""}
        </div>
        <div>
        {showSecond && (<Adddr/>)}
-       {showSecond ? "": ""}
        </div>
       </Box>
     </Box>
