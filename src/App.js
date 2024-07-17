@@ -19,26 +19,6 @@ const Print = () =>{
   window.print();
 }
 
-function AutoDateTime() {
-  const [dateTime, setDateTime] = useState(new Date());
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setDateTime(new Date());
-    }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
-  const formattedDateTime = dateTime.toLocaleString();
-
-  return (
-    <div>
-      {formattedDateTime}
-    </div>
-  );
-}
-
 export default function PermanentDrawerLeft(){
 
   const [showFirst, setShowFirst] = useState(false);
@@ -55,7 +35,6 @@ export default function PermanentDrawerLeft(){
         <Toolbar>
         <Typography noWrap component="div" sx={{marginLeft: '400px',fontSize: '30px' ,fontFamily: 'Helvetica-BoldOblique' ,color: 'black'}}>
             Abu Laboratory<br/>
-            <Typography sx={{color: 'black', marginLeft: '10px'}}><AutoDateTime/></Typography>
           </Typography>
           <Button variant="contained" sx={{backgroundColor: '#00796b', color: 'white', marginLeft: 'auto',
             "&:hover":{ backgroundColor:'white', color: '#00796b'}}} startIcon={<PrintRoundedIcon/>} onClick={Print}>print</Button>
@@ -130,9 +109,11 @@ export default function PermanentDrawerLeft(){
         <Toolbar />
         <div>
        {showFirst && (<Drfaizal/>)}
+       {showFirst ? "" : ""}
        </div>
        <div>
        {showSecond && (<Adddr/>)}
+       {showSecond ? "": ""}
        </div>
       </Box>
     </Box>

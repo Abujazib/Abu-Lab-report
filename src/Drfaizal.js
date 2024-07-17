@@ -21,7 +21,7 @@ function CurrentDate() {
 function Drfaizal() {
   return (
     <div className='Df'>
-      <p>Drfaizal</p>
+      <p sx={{fontFamily: "Edu AU VIC WA NT Hand", color: 'red'}}> Drfaizal </p>
     </div>
   )
 }
