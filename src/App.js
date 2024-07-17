@@ -80,7 +80,7 @@ export default function PermanentDrawerLeft(){
         <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: 'white'}}} onClick={() => setShowFirst(!showFirst)}>BILLIRUBIN</Button>
         <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: 'white'}}} onClick={() => setShowSecond(!showSecond)}>BIO-CHEMISTRY</Button>
         <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: 'white'}}}>BIO-CHEMISTRY-1</Button>
-        <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: 'white'}}}>BIO-CHEMISTRY-2</Button>
+        <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: 'white'}}}>BIO-CHEHISTRY-2</Button>
         <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: 'white'}}}>C SPINE X RAY OPINION</Button>
         <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: 'white'}}}>Culture report</Button>
         <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: 'white'}}}>Dr Faizal </Button>
@@ -128,10 +128,10 @@ export default function PermanentDrawerLeft(){
         sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3}}
       >
         <Toolbar />
-        <div style={showSecond? {display:"none"} : {display:"block"}}>
+        <div>
        {showFirst && (<Drfaizal/>)}
        </div>
-       <div style={showFirst? {display:"none"} : {display:"block"}}>
+       <div>
        {showSecond && (<Adddr/>)}
        </div>
       </Box>
