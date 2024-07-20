@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import TextField from '@mui/material/TextField';
 import './index.css';
 import ArticleIcon from '@mui/icons-material/Article';
 import Box from '@mui/material/Box';
-import { Typography } from '@mui/material';
+import Typography from '@mui/material/Typography';
 
 function CurrentDate() {
   const [currentDate, setCurrentDate] = useState(null);
