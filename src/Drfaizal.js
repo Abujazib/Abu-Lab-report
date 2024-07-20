@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './index.css';
 import ArticleIcon from '@mui/icons-material/Article';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-function CurrentDate() {
-  const [currentDate, setCurrentDate] = useState(null);
+// function CurrentDate() {
+//   const [currentDate, setCurrentDate] = useState(null);
 
-  useEffect(() => {
-    const today = new Date();
-    setCurrentDate(today);
-  }, []);
+//   useEffect(() => {
+//     const today = new Date();
+//     setCurrentDate(today);
+//   }, []);
 
-  return (
-    <div>
-      Today's date: {currentDate ? currentDate.toLocaleDateString() : 'Loading...'}
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       Today's date: {currentDate ? currentDate.toLocaleDateString() : 'Loading...'}
+//     </div>
+//   );
+// }
 
 function Drfaizal() {
   return (

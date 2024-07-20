@@ -9,6 +9,11 @@
     display: none !important;
   }
 }
+@media saveaspdf{
+  .drawe{
+    display: none !important;
+  }
+}
 
 .inbo{
   font-size: 20px;
