@@ -1,4 +1,4 @@
-import React, { useState, useRef} from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,15 +13,6 @@ import Adddr from './Adddr';
 import PrintRoundedIcon from '@mui/icons-material/PrintRounded';
 
 
-const ComponentToPrint = () => {
-  // Your component content to be printed
-  return (
-    <div>
-      <h1>This is the content to print</h1>
-    </div>
-  );
-}
-
 const drawerWidth = 240;
 
 const Print = () =>{      
@@ -32,13 +23,6 @@ export default function PermanentDrawerLeft(){
 
   const [showFirst, setShowFirst] = useState(false);
   const [showSecond, setShowSecond] = useState(false);
-  const componentRef = useRef(null);
-
-  const handlePrint = () => {
-    if (componentRef.current) {
-      componentRef.current.window.print();
-    }
-  };
   
   return (
     <Box sx={{ display: 'flex' }}>
@@ -52,7 +36,6 @@ export default function PermanentDrawerLeft(){
         <Typography noWrap component="div" sx={{marginLeft: '400px',fontSize: '30px' ,fontFamily: 'Helvetica-BoldOblique' ,color: 'black'}}>
             Abu Laboratory<br/>
           </Typography>
-          <button onClick={handlePrint}>Print this!</button>
           <Button variant="contained" sx={{backgroundColor: '#00796b', color: 'white', marginLeft: 'auto',
             "&:hover":{ backgroundColor:'white', color: '#00796b'}}} startIcon={<PrintRoundedIcon/>} onClick={Print}>print</Button>
         </Toolbar>
@@ -124,7 +107,6 @@ export default function PermanentDrawerLeft(){
         sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3}}
       >
         <Toolbar />
-        <ComponentToPrint ref={componentRef} />
         <div>
        {showFirst && (<Drfaizal/>)}
        </div>
