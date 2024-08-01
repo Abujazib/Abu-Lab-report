@@ -7,8 +7,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import './index.css';
-import Snackbar from '@mui/material/Snackbar';
-import Alert from '@mui/material/Alert';
+import IconButton from '@mui/material/IconButton';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import Typography from '@mui/material/Typography';
@@ -123,10 +122,14 @@ export default function PermanentDrawerLeft(){
         <Toolbar />
         <div open={Drfaopen} onClose={setDrfaopen}>
         <Box sx={{backgroundColor: '#00bcd4'}}>
-        <Typography sx={{textAlign: 'center', color: '#fff' ,fontWeight: 'Bold', fontSize: '30px', 
+        <Typography sx={{textAlign: 'center', color: '#00f5c8' ,fontWeight: 'Bold', fontSize: '30px', 
         fontFamily: 'Courier-Oblique'}}> 
         <InsertDriveFileIcon sx={{fontSize: 30}}/> 
-         Dr Faizal <HighlightOffIcon sx={{fontSize: 30, fontWeight: 'Bold',marginLeft: '880px'}} onClick={closefileofDrfazil}/> </Typography>
+         Dr Faizal  
+         <IconButton aria-label="Example" onClick={closefileofDrfazil} sx={{color: '#00f5c8'}}>
+              < HighlightOffIcon />
+          </IconButton>
+        </Typography>
       </Box>
        <Drfaizal/>
        </div>
