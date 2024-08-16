@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField'
 import ArticleIcon from '@mui/icons-material/Article';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import { Tooltip } from '@mui/material';
 
 // function CurrentDate() {
 //   const [currentDate, setCurrentDate] = useState(null);
@@ -23,9 +24,13 @@ import Typography from '@mui/material/Typography';
 function Drfaizal() {
   return (
     <div className='Df'>
-      <Typography>Abu</Typography>
+      <Typography sx={{fontSize: '25px', marginBottom: '10px'}}><b>Billirubin</b></Typography>
+    <Box className='1page' sx={{border: '2px solid black'}}>
+    <Tooltip title="Page">
+    <Typography sx={{ marginLeft: '1020px'}}>1/1</Typography>
+    </Tooltip>
+    </Box>
     </div>
   )
 }
-
 export default Drfaizal
