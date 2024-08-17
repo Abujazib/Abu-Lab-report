@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom' 
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -8,13 +7,10 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import './index.css';
-import IconButton from '@mui/material/IconButton';
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
-import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Billirubin from './Billirubin';
-// import Adddr from './Adddr';
+import Biochemistry from './Bio-chemistry';
 import PrintRoundedIcon from '@mui/icons-material/PrintRounded';
 
 
@@ -27,6 +23,7 @@ const Print = () =>{
 export default function PermanentDrawerLeft(){
 
   const [drfaOpen,setDrfaOpen]= useState(false);
+  const [bioChem,setBioChem]= useState(false);
   
   return (
 
@@ -64,7 +61,7 @@ export default function PermanentDrawerLeft(){
         <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: '#43C6AC'}}}
         onClick={() => setDrfaOpen(!drfaOpen)}>BILLIRUBIN</Button>
         <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: '#43C6AC'}}}
-        >BIO-CHEMISTRY</Button>
+        onClick={() => setBioChem(!bioChem)}>BIO-CHEMISTRY</Button>
         <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: '#43C6AC'}}}
         >BIO-CHEMISTRY-1</Button>
         <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: '#43C6AC'}}}
@@ -157,14 +154,16 @@ export default function PermanentDrawerLeft(){
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-        { drfaOpen &&
+      { drfaOpen &&
         (<div>
             <Billirubin/>
-        </div>)
-        }
-       <div>
-       {/* {showSecond && (<Adddr/>)} */}
-       </div>
+        </div>)
+      }
+      { bioChem && 
+       (<div>
+        <Biochemistry/>
+       </div>)
+      }
       </Box>
     </Box>
   );

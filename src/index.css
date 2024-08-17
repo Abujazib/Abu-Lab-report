@@ -8,10 +8,22 @@
   .Addbut{
     display: none !important;
   }
-}
-@media saveaspdf{
-  .drawe{
+  .Billir{
     display: none !important;
+  }
+  .firpage{
+    border: none !important;
+  }
+  .pageno{
+    display: none !important;
+  }
+  .War{
+    display: none !important;
+  }
+  .MuiOutlinedInput-root{
+    outline: none !important;
+    border: none  !important;
+    box-shadow: none !important;
   }
 }
 
