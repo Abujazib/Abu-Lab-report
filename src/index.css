@@ -20,10 +20,12 @@
   .War{
     display: none !important;
   }
-  .MuiOutlinedInput-root{
-    outline: none !important;
-    border: none  !important;
-    box-shadow: none !important;
+  .Result{
+    display: inline-block !important;
+    margin-right: 25px;
+  }
+  .RefRange{
+    display: inline-block !important;
   }
 }
 

@@ -14,20 +14,26 @@ function Biochemistry() {
     <Tooltip title="Page">
     <Typography sx={{ marginLeft: '1020px'}} className='pageno'>1/9</Typography>
     </Tooltip>
-    <Typography sx={{fontfamily: 'Cambria', fontSize: '20px'}}> <i> Patient Name
-      <Typography sx={{marginLeft: '25px', fontSize: '20px' ,display: 'inline-block'}}> <b> : </b> </Typography> </i>
+    <Typography sx={{fontfamily: 'Cambria', fontSize: '20px'}}>  Patient Name
+      <Typography sx={{marginLeft: '30px', fontSize: '20px' ,display: 'inline-block'}}> <b> : </b> </Typography> 
     </Typography><br/>
     
-    <Typography sx={{fontfamily: 'Cambria', fontSize: '20px'}}> <i> Age / Sex
-      <Typography sx={{marginLeft: '55px', fontSize: '20px' ,display: 'inline-block'}}> <b> : </b> </Typography> </i>
+    <Typography sx={{fontfamily: 'Cambria', fontSize: '20px'}}>  Age / Sex
+      <Typography sx={{marginLeft: '65px', fontSize: '20px' ,display: 'inline-block'}}> <b> : </b> </Typography> 
       <TextField variant="outlined" size= "small" color='none' className=".MuiOutlinedInput-root" 
-      sx={{fontSize: '20px', color:'black', width: '140px', marginColor: 'red'}} defaultValue="Age/Sex"/>
+      sx={{fontSize: '20px', color:'black', width: '140px', marginLeft: '5px'}} defaultValue="Age/Sex"/>
     </Typography><br/>
 
-    <Typography sx={{fontfamily: 'Cambria', fontSize: '20px'}}> <i> Date
-      <Typography sx={{marginLeft: '90px', fontSize: '20px' ,display: 'inline-block'}}> <b> : </b> </Typography> </i>
+    <Typography sx={{fontfamily: 'Cambria', fontSize: '20px'}}>  Date
+      <Typography sx={{marginLeft: '110px', fontSize: '20px' ,display: 'inline-block'}}> <b> : </b> </Typography> 
       <TextField variant="outlined" size= "small" color='none' className=".MuiOutlinedInput-root" 
       sx={{fontSize: '20px', color:'black', width: '140px', marginLeft: '5px'}} type='date'/>
+    </Typography><br/>
+
+    <Typography sx={{fontfamily: 'Cambria', fontSize: '20px'}}> Ref.By
+      <Typography sx={{marginLeft: '95px', fontSize: '20px' ,display: 'inline-block'}}> <b> : </b> </Typography> 
+      <TextField variant="outlined" size= "small" color='none' className=".MuiOutlinedInput-root" 
+      sx={{fontSize: '20px', color:'black', width: '800px', marginLeft: '5px'}}/>
     </Typography><br/>
 
     </Box>
