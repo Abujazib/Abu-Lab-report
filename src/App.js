@@ -10,8 +10,11 @@ import './index.css';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Billirubin from './Billirubin';
-import Biochemistry from './Bio-chemistry';
+import Biochemistry from './Biochemistry';
+import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
 import PrintRoundedIcon from '@mui/icons-material/PrintRounded';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
 
 
 const drawerWidth = 240;
@@ -23,8 +26,21 @@ const Print = () =>{
 export default function PermanentDrawerLeft(){
 
   const [drfaOpen,setDrfaOpen]= useState(false);
+  const OpenDrfazil = () => {
+    setDrfaOpen(true);
+  };
+  const Closedrfa = () =>{
+    setDrfaOpen(false);
+  };
+
   const [bioChem,setBioChem]= useState(false);
-  
+  const Openbio = () => {
+    setBioChem(true);
+  };
+  const Closebio = () =>{
+    setBioChem(false);
+  };
+
   return (
 
     <Box sx={{ display: 'flex' }}>
@@ -59,9 +75,9 @@ export default function PermanentDrawerLeft(){
         <Toolbar />
         <Divider />
         <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: '#43C6AC'}}}
-        onClick={() => setDrfaOpen(!drfaOpen)}>BILLIRUBIN</Button>
+        onClick={OpenDrfazil}>BILLIRUBIN</Button>
         <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: '#43C6AC'}}}
-        onClick={() => setBioChem(!bioChem)}>BIO-CHEMISTRY</Button>
+        onClick={Openbio}>BIO-CHEMISTRY</Button>
         <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: '#43C6AC'}}}
         >BIO-CHEMISTRY-1</Button>
         <Button variant="text" sx={{color:'#00bcd4', fontSize: 15 ,"&:hover": {color: '#43C6AC'}}}
@@ -155,14 +171,26 @@ export default function PermanentDrawerLeft(){
       >
         <Toolbar />
       { drfaOpen &&
-        (<div>
-            <Billirubin/>
-        </div>)
+        (<div sx={{display: 'none'}}>
+            <Typography sx={{fontSize: '25px', marginBottom: '10px'}} className='Billir'><b>BILLIRUBIN</b>
+            <Tooltip title="Close">
+            <IconButton sx={{"&:hover":{color: 'red'} , display: 'inline-block' ,color: '#08c8f3', marginLeft: '880px'}}
+            onClick={Closedrfa} className='clo'><CancelRoundedIcon/></IconButton>
+            </Tooltip>
+            </Typography>
+            <Billirubin/>
+        </div>) 
       }
-      { bioChem && 
-       (<div>
-        <Biochemistry/>
-       </div>)
+      { bioChem &&
+        (<div sx={{display: 'none'}}>
+            <Typography sx={{fontSize: '25px', marginBottom: '10px'}} className='Billir'><b>BIO-CHEMISTRY</b>
+            <Tooltip title="Close">
+            <IconButton sx={{"&:hover":{color: 'red'} , display: 'inline-block' ,color: '#08c8f3', marginLeft: '880px'}}
+            onClick={Closebio} className='clo'><CancelRoundedIcon/></IconButton>
+            </Tooltip>
+            </Typography>
+            <Biochemistry/>
+        </div>) 
       }
       </Box>
     </Box>

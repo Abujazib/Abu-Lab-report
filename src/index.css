@@ -27,6 +27,12 @@
   .RefRange{
     display: inline-block !important;
   }
+  .fist{
+    margin-top: 55px;
+  }
+  .clo{
+    display: none !important;
+  }
 }
 
 .inbo{
