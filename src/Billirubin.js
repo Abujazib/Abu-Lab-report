@@ -10,7 +10,6 @@ function Bilirubin() {
 
   return (
     <div className='Df'>
-      <Typography sx={{fontSize: '25px', marginBottom: '10px'}} className='Billir'><b>BILLIRUBIN</b></Typography>
     <Box className='firpage' sx={{ border: '2px solid #00bcd4', borderRadius: '5px'}}>
     <Tooltip title="Page">
     <Typography sx={{ marginLeft: '1020px'}} className='pageno'>1/1</Typography>

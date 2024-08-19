@@ -3,19 +3,22 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import './index.css';
 import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import MenuList from '@mui/material/MenuList';
-import MenuItem from '@mui/material/MenuItem';
-import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 import Tooltip  from '@mui/material/Tooltip';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle'
 
 function Biochemistry() {
 
   const [firMenu,setFirMenu]=useState(false);
-
+  const opendio = () => {
+    setFirMenu(true);
+  }
+  const onClose = () => {
+    setFirMenu(false)
+  }
   return (
     <div className='Df'>
     <Box className='firpage' sx={{ border: '2px solid #00bcd4', borderRadius: '5px'}}>
@@ -50,35 +53,9 @@ function Biochemistry() {
     <Typography sx={{marginLeft: '250px', display:'inline-block', fontSize: '15px'}} className='RefRange'> <b> Ref.Range </b> </Typography>
     </Typography>
     <hr/>
-    { firMenu &&  <Paper sx={{ width: 320, maxWidth: '100%', marginleft: '25px'}}>
-      <MenuList>
-        <MenuItem>
-          <ListItemText>BLOOD REPORT [F || PP]</ListItemText>
-          <Typography variant="body2" color="text.secondary">
-            ⌘
-          </Typography>
-        </MenuItem>
-        </MenuList>
-        <MenuList>
-        <MenuItem>
-          <ListItemText>BLOOD REPORT [F]</ListItemText>
-          <Typography variant="body2" color="text.secondary">
-            ⌘
-          </Typography>
-        </MenuItem>
-        </MenuList>
-        <MenuList>
-        <MenuItem>
-          <ListItemText>BLOOD REPORT [PP]</ListItemText>
-          <Typography variant="body2" color="text.secondary">
-            ⌘
-          </Typography>
-        </MenuItem>
-        </MenuList>
-    </Paper>}
     <Typography sx={{fontSize: '20px', marginTop: '900px', marginLeft: '900px'}}>
     <Button startIcon={<AddCircleIcon/>} sx={{display: 'inline-block'}} variant="contained"
-      onClick={() => setFirMenu(!firMenu)}>Add Result</Button>
+      onClick={opendio}>Add Result</Button>
       <b>LABINCHARGE</b>
     </Typography>
     </Box>
@@ -90,6 +67,9 @@ function Biochemistry() {
     </Tooltip>
     <hr/>
     </div>
+    <Dialog onClose={onClose} open={firMenu}>
+      <DialogTitle>Set backup account</DialogTitle>
+    </Dialog>
     </div>
   )
 }
