@@ -16,7 +16,7 @@ function Biochemistry() {
   const opendio = () => {
     setFirMenu(true);
   }
-  const onClose = () => {
+  const onClome = () => {
     setFirMenu(false)
   }
   return (
@@ -32,7 +32,9 @@ function Biochemistry() {
     <Typography sx={{fontfamily: 'Cambria', fontSize: '20px'}}>  Age / Sex
       <Typography sx={{marginLeft: '65px', fontSize: '20px' ,display: 'inline-block'}}> <b> : </b> </Typography> 
       <TextField variant="outlined" size= "small" color='none' className=".MuiOutlinedInput-root" 
-      sx={{fontSize: '20px', color:'black', width: '140px', marginLeft: '5px'}} defaultValue="Age/Sex"/>
+      sx={{fontSize: '20px', color:'black', width: '140px', marginLeft: '5px'}} defaultValue="Age/Sex" placeholder="Age/Sex"/>
+      <Button startIcon={<AddCircleIcon/>} sx={{display: 'inline-block', marginLeft: '590px'}}  variant="contained"
+      onClick={opendio}>Add Result</Button>
     </Typography><br/>
 
     <Typography sx={{fontfamily: 'Cambria', fontSize: '20px'}}>  Date
@@ -53,9 +55,14 @@ function Biochemistry() {
     <Typography sx={{marginLeft: '250px', display:'inline-block', fontSize: '15px'}} className='RefRange'> <b> Ref.Range </b> </Typography>
     </Typography>
     <hr/>
+    <Typography> <u>BLOOD REPORT</u> </Typography>
+    <Typography>Blood sugar [F]
+      <Typography sx={{marginLeft: '190px', marginTop: '2px' ,display: 'inline-block', fontSize: '1rem'}}> <b> : </b></Typography>
+      <TextField variant="outlined" size= "small" defaultValue="80.0" sx={{width: '60px', fontSize: '1rem'}}/>
+      <Typography sx={{display: 'inline-block', fontSize: '1rem'}}>mgs / dl</Typography>
+      <Typography sx={{display: 'inline-block', marginLeft: '100px'}}>0.1 – 1.2 mgs / dl</Typography>
+    </Typography>
     <Typography sx={{fontSize: '20px', marginTop: '900px', marginLeft: '900px'}}>
-    <Button startIcon={<AddCircleIcon/>} sx={{display: 'inline-block'}} variant="contained"
-      onClick={opendio}>Add Result</Button>
       <b>LABINCHARGE</b>
     </Typography>
     </Box>
@@ -67,8 +74,14 @@ function Biochemistry() {
     </Tooltip>
     <hr/>
     </div>
-    <Dialog onClose={onClose} open={firMenu}>
-      <DialogTitle>Set backup account</DialogTitle>
+    <Dialog onClose={onClome} open={firMenu}>
+      <DialogTitle>Rusult</DialogTitle>
+      <Button>BLOOD REPORT [F | PP]</Button>
+      <Button>BLOOD REPORT [F]</Button>
+      <Button>BLOOD REPORT [PP]</Button>
+      <Button>SERUM LIPID PROFILE [ Fasting]</Button>
+      <Button>ATHEROGENICITY INDEX RATIO</Button>
+      <Button color= 'error' onClick={onClome}>Close</Button>
     </Dialog>
     </div>
   )

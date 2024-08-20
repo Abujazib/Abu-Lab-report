@@ -185,7 +185,7 @@ export default function PermanentDrawerLeft(){
         (<div sx={{display: 'none'}}>
             <Typography sx={{fontSize: '25px', marginBottom: '10px'}} className='Billir'><b>BIO-CHEMISTRY</b>
             <Tooltip title="Close">
-            <IconButton sx={{"&:hover":{color: 'red'} , display: 'inline-block' ,color: '#08c8f3', marginLeft: '880px'}}
+            <IconButton sx={{"&:hover":{color: 'red'} , display: 'inline-block' ,color: '#08c8f3', marginLeft: '820px'}}
             onClick={Closebio} className='clo'><CancelRoundedIcon/></IconButton>
             </Tooltip>
             </Typography>

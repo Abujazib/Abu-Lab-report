@@ -18,21 +18,21 @@ function Bilirubin() {
       <Typography sx={{marginLeft: '30px', fontSize: '20px' ,display: 'inline-block'}}> <b> : </b> </Typography> 
     </Typography><br/>
 
-    <Typography sx={{fontfamily: 'Cambria', fontSize: '20px'}}>  Age / Sex
+    <Typography sx={{fontfamily: 'Cambria !important', fontSize: '20px'}}>  Age / Sex
       <Typography sx={{marginLeft: '65px', fontSize: '20px' ,display: 'inline-block'}}> <b> : </b> </Typography> 
-      <TextField variant="outlined" size= "small" color='none' className=".MuiOutlinedInput-root" 
-      sx={{fontSize: '20px', color:'black', width: '140px', marginLeft: '5px'}} defaultValue="Age/Sex"/>
+      <TextField variant="outlined" size= "small"  className=".MuiOutlinedInput-root"  placeholder="Age/Sex" 
+      sx={{fontSize: '20px', color:'black', width: '140px', marginLeft: '5px',}}/>
     </Typography><br/>
 
     <Typography sx={{fontfamily: 'Cambria', fontSize: '20px'}}> Date
       <Typography sx={{marginLeft: '110px', fontSize: '20px' ,display: 'inline-block'}}> <b> : </b> </Typography> 
-      <TextField variant="outlined" size= "small" color='none' className=".MuiOutlinedInput-root" 
+      <TextField variant="outlined" size= "small"  className=".MuiOutlinedInput-root" 
       sx={{fontSize: '20px', color:'black', width: '140px', marginLeft: '5px'}} type='date'/>
     </Typography><br/>
 
     <Typography sx={{fontfamily: 'Cambria', fontSize: '20px'}}> Ref.By
       <Typography sx={{marginLeft: '95px', fontSize: '20px' ,display: 'inline-block'}}> <b> : </b> </Typography> 
-      <TextField variant="outlined" size= "small" color='none' className=".MuiOutlinedInput-root" 
+      <TextField variant="outlined" size= "small"  className=".MuiOutlinedInput-root" 
       sx={{fontSize: '20px', color:'black', width: '500px', marginLeft: '5px'}}/>
     </Typography><br/></div>
 
