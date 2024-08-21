@@ -14,7 +14,7 @@ function Bilirubin() {
     <Tooltip title="Page">
     <Typography sx={{ marginLeft: '1020px'}} className='pageno'>1/1</Typography>
     </Tooltip><div className='fist'>
-    <Typography sx={{fontfamily: 'Cambria', fontSize: '20px'}}>  Patient Name
+    <Typography sx={{fontfamily: 'Cambria', fontSize: '30px'}} className='Pana'>  Patient Name
       <Typography sx={{marginLeft: '30px', fontSize: '20px' ,display: 'inline-block'}}> <b> : </b> </Typography> 
     </Typography><br/>
 
