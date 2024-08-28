@@ -62,14 +62,6 @@ function Bilirubin() {
     </Typography>
     <Typography sx={{marginLeft: '900px', fontSize: '20px', marginTop: '800px'}}><b>LABINCHARGE</b></Typography>
     </Box>
-    <div className='War'>
-    <hr/>
-    <Tooltip title="End of Billirubin file">
-    <Typography  color="error" sx={{textAlign: 'center', size: '25px'}}> <ReportGmailerrorredIcon sx={{marginRight: '10px'}}/> 
-    *** This is end of Billirubin file *** <ReportGmailerrorredIcon sx={{marginRight: '10px'}}/> </Typography>
-    </Tooltip>
-    <hr/>
-    </div>
     </div>
   );
 }
